@@ -718,6 +718,7 @@ button {
   border: 2px solid var(--color-primary);
   border-radius: var(--border-radius-lg);
   opacity: 0.3;
+  z-index: 0;
 }
 
 .concept__image {
@@ -725,6 +726,8 @@ button {
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
 }
 
 .concept__image img {

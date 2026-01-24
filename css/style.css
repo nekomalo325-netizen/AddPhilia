@@ -708,18 +708,7 @@ button {
   padding: var(--space-6);
 }
 
-.concept__image-frame::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80%;
-  height: 80%;
-  border: 2px solid var(--color-primary);
-  border-radius: var(--border-radius-lg);
-  opacity: 0.3;
-  z-index: 0;
-}
+
 
 .concept__image {
   aspect-ratio: 3 / 4;

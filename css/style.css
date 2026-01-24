@@ -441,6 +441,81 @@ button {
 }
 
 /* ============================================
+   モバイルメニュー（開いた状態）
+   ============================================ */
+@media (max-width: 1023px) {
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-xl);
+    padding: calc(var(--header-height) + var(--space-8)) var(--space-8) var(--space-8);
+    transition: right var(--transition-base);
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .header__nav.is-open {
+    right: 0;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .header__nav-list li {
+    width: 100%;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header__nav-list li:last-child {
+    border-bottom: none;
+  }
+
+  .header__nav-link {
+    display: block;
+    padding: var(--space-5) 0;
+    font-size: var(--font-size-lg);
+  }
+
+  .header__nav-link::after {
+    display: none;
+  }
+
+  .header__nav-link--cta {
+    display: inline-block;
+    margin-top: var(--space-4);
+    text-align: center;
+  }
+
+  /* オーバーレイ */
+  .header__nav::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-base), visibility var(--transition-base);
+    z-index: -1;
+  }
+
+  .header__nav.is-open::before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ============================================
    ヒーローセクション
    ============================================ */
 .hero {

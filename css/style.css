@@ -445,6 +445,7 @@ button {
    ============================================ */
 @media (max-width: 1023px) {
   .header__nav {
+    display: block;
     position: fixed;
     top: 0;
     right: -100%;

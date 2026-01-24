@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Add Philia</title>
+    <meta name="description" content="Add Philiaへのお問い合わせ。制作依頼やコラボレーションのご相談など、お気軽にご連絡ください。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Klee+One:wght@400;600&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">Add Philia</a>
+            <nav class="header__nav" id="nav">
+                <ul class="header__nav-list">
+                    <li><a href="philosophy.html" class="header__nav-link">Philosophy</a></li>
+                    <li><a href="about.html" class="header__nav-link">About</a></li>
+                    <li><a href="works.html" class="header__nav-link">Works</a></li>
+                    <li><a href="activities.html" class="header__nav-link">Activities</a></li>
+                    <li><a href="contact.html"
+                            class="header__nav-link header__nav-link--cta header__nav-link--active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="header__lang-toggle" aria-label="言語を切り替え"><span
+                        class="header__lang-current">JA</span></button>
+                <button class="header__menu-toggle" id="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="header__menu-bar"></span>
+                    <span class="header__menu-bar"></span>
+                    <span class="header__menu-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <span class="page-hero__label">Contact</span>
+                <h1 class="page-hero__title">お問い合わせ</h1>
+                <p class="page-hero__description">お気軽にご連絡ください</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>お問い合わせについて</h2>
+                        <p>
+                            制作依頼やコラボレーションのご相談など、
+                            下記フォームよりお気軽にお問い合わせください。
+                            通常3営業日以内にご返信いたします。
+                        </p>
+
+                        <div class="contact-types">
+                            <div class="contact-type">
+                                <span class="contact-type__icon">🎬</span>
+                                <span class="contact-type__text">Add Philiaへの制作依頼</span>
+                            </div>
+                            <div class="contact-type">
+                                <span class="contact-type__icon">🎤</span>
+                                <span class="contact-type__text">YUKImaloへの依頼</span>
+                            </div>
+                            <div class="contact-type">
+                                <span class="contact-type__icon">🍪</span>
+                                <span class="contact-type__text">あにまる製菓について</span>
+                            </div>
+                            <div class="contact-type">
+                                <span class="contact-type__icon">🎮</span>
+                                <span class="contact-type__text">FunExへの相談</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="form-group">
+                            <label for="name">お名前<span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="山田 太郎">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">メールアドレス<span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">お問い合わせ種別<span class="required">*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">選択してください</option>
+                                <option value="add-philia">Add Philiaへの制作依頼</option>
+                                <option value="yukimalo">YUKImaloへの依頼</option>
+                                <option value="animaru">あにまる製菓について</option>
+                                <option value="funex">FunExへの相談</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">メッセージ<span class="required">*</span></label>
+                            <textarea id="message" name="message" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn--primary btn--large">送信する</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">Add Philia</a>
+                    <p class="footer__tagline">無機質な世界に、体温を1℃加える。</p>
+                </div>
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li><a href="philosophy.html">Philosophy</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__social">
+                    <a href="https://x.com/nekomalo3" target="_blank" rel="noopener noreferrer"
+                        aria-label="X (Twitter)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2026 Add Philia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/petal-effect.js"></script>
+</body>
+
+</html>

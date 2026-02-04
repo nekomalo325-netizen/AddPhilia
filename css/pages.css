@@ -1,1 +1,608 @@
-/* Pages CSS - Reset to empty as per user request */
+/* ============================================
+   ページ共通 (Works, About, Philosophy, etc)
+   ============================================ */
+.page-hero {
+    position: relative;
+    padding: 160px 0 80px;
+    background-color: var(--color-background-alt);
+    text-align: center;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(91, 122, 107, 0.05) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.page-hero__label {
+    display: block;
+    font-family: var(--font-heading-en);
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero__title {
+    font-family: var(--font-heading-ja);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero__description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   Philosophy ページ
+   ============================================ */
+.philosophy-section {
+    padding: var(--space-12) 0 var(--space-24);
+    background-color: var(--color-background);
+}
+
+.philosophy-block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    align-items: center;
+    margin-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+    .philosophy-block {
+        flex-direction: row;
+        gap: var(--space-12);
+    }
+
+    .philosophy-block--reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.philosophy-block__text {
+    flex: 1;
+}
+
+.philosophy-block__visual {
+    flex: 1;
+    width: 100%;
+}
+
+.philosophy-block__title {
+    margin-bottom: var(--space-4);
+    line-height: 1.2;
+}
+
+.philosophy-block__title-en {
+    display: block;
+    font-family: var(--font-heading-en);
+    font-size: var(--font-size-4xl);
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.philosophy-block__title-ja {
+    display: block;
+    font-family: var(--font-heading-ja);
+    font-size: var(--font-size-xl);
+    margin-top: var(--space-2);
+}
+
+.philosophy-block__description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    line-height: 2;
+}
+
+.philosophy-block__image {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 4 / 3;
+}
+
+.philosophy-block__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.philosophy-divider {
+    text-align: center;
+    margin: var(--space-12) 0;
+    color: var(--color-primary-light);
+    font-size: var(--font-size-2xl);
+    opacity: 0.5;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: var(--space-24) 0;
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-title {
+    font-family: var(--font-heading-ja);
+    font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+    margin-bottom: var(--space-8);
+    line-height: 1.6;
+}
+
+.mission-title__accent {
+    background: linear-gradient(transparent 60%, var(--color-accent-light) 60%);
+    padding: 0 var(--space-2);
+}
+
+.mission-text p {
+    font-size: var(--font-size-lg);
+    line-height: 2.2;
+    margin-bottom: var(--space-6);
+    color: var(--color-text);
+}
+
+.mission-text strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Message Section */
+.message-section {
+    padding: var(--space-24) 0;
+    background-color: var(--color-background-alt);
+}
+
+.message-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    padding: var(--space-8) var(--space-6);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .message-card {
+        padding: var(--space-12);
+    }
+}
+
+.message-quote p {
+    font-size: var(--font-size-lg);
+    line-height: 2;
+    margin-bottom: var(--space-6);
+    font-family: var(--font-heading-ja);
+}
+
+.message-quote__footer {
+    margin-top: var(--space-8);
+    font-family: var(--font-heading-en);
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+}
+
+/* ============================================
+   Works ページ
+   ============================================ */
+.works-section {
+    padding: var(--space-12) 0 var(--space-24);
+    background-color: var(--color-background);
+}
+
+/* フィルター */
+.works-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-12);
+}
+
+.works-filter__btn {
+    font-family: var(--font-body-ja);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    padding: var(--space-2) var(--space-6);
+    border-radius: var(--border-radius-full);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-light);
+    background-color: transparent;
+    transition: all var(--transition-fast);
+}
+
+.works-filter__btn:hover,
+.works-filter__btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+/* ギャラリー */
+.works-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+    .works-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .works-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 作品アイテム */
+.work-item {
+    position: relative;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.work-item__image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-background-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--color-text-muted);
+    overflow: hidden;
+}
+
+.work-item__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    pointer-events: none;
+}
+
+.work-item:hover .work-item__overlay {
+    opacity: 1;
+}
+
+.work-item__info {
+    padding: var(--space-5);
+}
+
+.work-item__category {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    color: var(--color-primary);
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-2);
+}
+
+.work-item__title {
+    font-family: var(--font-heading-ja);
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+    line-height: 1.4;
+}
+
+.work-item__year {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+    text-align: right;
+}
+
+/* ============================================
+   About ページ
+   ============================================ */
+.about-section {
+    padding: var(--space-12) 0 var(--space-24);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        grid-template-columns: 2fr 3fr;
+    }
+}
+
+.about-profile-image {
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 3 / 4;
+}
+
+.about-profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-info h2 {
+    font-family: var(--font-heading-ja);
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+}
+
+.about-titles {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+}
+
+.about-title-tag {
+    font-size: var(--font-size-xs);
+    background-color: var(--color-background-alt);
+    color: var(--color-primary-dark);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--border-radius-full);
+}
+
+.about-description {
+    line-height: 2;
+    margin-bottom: var(--space-6);
+    color: var(--color-text-light);
+}
+
+.about-links {
+    margin-top: var(--space-6);
+}
+
+.about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.about-link:hover {
+    color: var(--color-primary);
+}
+
+/* Skills Section */
+.skills-section {
+    padding: var(--space-24) 0;
+    background-color: var(--color-background-alt);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+@media (min-width: 640px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.skill-card {
+    background-color: var(--color-white);
+    padding: var(--space-6);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: transform var(--transition-base);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-4);
+}
+
+.skill-card__title {
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
+}
+
+.skill-card__description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Activities ページ
+   ============================================ */
+.activities-section {
+    padding-bottom: var(--space-24);
+}
+
+.activity-detail {
+    padding: var(--space-12) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.activity-detail:last-child {
+    border-bottom: none;
+}
+
+.activity-detail__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .activity-detail__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-12);
+    }
+}
+
+.activity-detail__image {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 16 / 9;
+}
+
+.activity-detail__image--logo {
+    background-color: var(--color-white);
+    padding: var(--space-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-detail__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activity-detail__image--logo img {
+    object-fit: contain;
+}
+
+.activity-detail__category {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    color: var(--color-primary);
+    background-color: rgba(91, 122, 107, 0.1);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--border-radius-full);
+    margin-bottom: var(--space-3);
+}
+
+.activity-detail__title {
+    font-family: var(--font-heading-ja);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-2);
+    color: var(--color-text);
+}
+
+.activity-detail__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+    font-weight: 500;
+}
+
+.activity-detail__description {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--space-6);
+}
+
+.activity-detail__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.activity-detail__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    transition: all var(--transition-base);
+}
+
+.activity-detail__link--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.activity-detail__link--primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.activity-detail__link--outline {
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.activity-detail__link--outline:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* ============================================
+   動画埋め込み用スタイル
+   ============================================ */
+.work-item__video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.work-item__video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}

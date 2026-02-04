@@ -290,6 +290,23 @@
     overflow: hidden;
 }
 
+.work-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: object-fit 0.3s;
+}
+
+/* ホバー時に全体を表示（見切れ防止） */
+.work-item__image:hover img,
+.work-item__video:hover video,
+.work-item--contain .work-item__image img,
+.work-item--contain .work-item__video video {
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* 背景を暗くして見やすく */
+}
+
 .work-item__overlay {
     position: absolute;
     top: 0;
@@ -600,9 +617,11 @@
     overflow: hidden;
 }
 
-.work-item__video iframe {
+.work-item__video iframe,
+.work-item__video video {
     width: 100%;
     height: 100%;
     border: none;
     display: block;
+    object-fit: cover;
 }

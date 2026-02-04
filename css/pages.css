@@ -297,15 +297,7 @@
     transition: object-fit 0.3s;
 }
 
-/* ホバー時に全体を表示（見切れ防止） */
-.work-item__image:hover img,
-.work-item__video:hover video,
-.work-item--contain .work-item__image img,
-.work-item--contain .work-item__video video {
-    object-fit: contain;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* 背景を暗くして見やすく */
-}
+
 
 .work-item__overlay {
     position: absolute;
@@ -624,4 +616,13 @@
     border: none;
     display: block;
     object-fit: cover;
+}
+
+/* ホバー時および特定クラス付与時に全体を表示（見切れ防止） */
+.work-item__image:hover img,
+.work-item__video:hover video,
+.work-item--contain .work-item__image img,
+.work-item--contain .work-item__video video {
+    object-fit: contain;
+    background-color: #000;
 }

@@ -449,11 +449,15 @@
 
 .skill-card {
     background-color: var(--color-white);
-    padding: var(--space-6);
+    padding: var(--space-4);
+    /* パディングを少し減らす */
     border-radius: var(--border-radius-md);
     box-shadow: var(--shadow-sm);
     text-align: center;
     transition: transform var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .skill-card:hover {
@@ -463,12 +467,31 @@
 .skill-card__icon {
     font-size: 2.5rem;
     margin-bottom: var(--space-4);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* 正方形の画像を完全に見せるためアスペクト比を固定 */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* はみ出し防止 */
+}
+
+.skill-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 画像を枠いっぱいに広げる（トリミングあり） */
+    border-radius: var(--border-radius-sm);
 }
 
 .skill-card__title {
     font-weight: 700;
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
     color: var(--color-text);
+    margin-top: auto;
+    /* 下部に寄せる */
 }
 
 .skill-card__description {

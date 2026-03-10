@@ -712,7 +712,9 @@ button {
 
 
 .concept__image {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
+  width: 85%;
+  margin: 0 auto;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
